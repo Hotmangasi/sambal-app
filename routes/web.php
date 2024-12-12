@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +27,9 @@ Route::get('/dashboard', function () {
 Route::middleware(['auth'])->group(function (){
     Route::resource('admin/products', ProductController::class);
 });
+
+// Route::resource('products', ProductController::class)->middleware('auth');
+Route::resource('products', ProductController::class);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
