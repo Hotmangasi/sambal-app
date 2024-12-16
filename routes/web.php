@@ -17,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('about', function () {
+    return view('customer.about');
+});
+Route ::get('produk', function () {
+    return view('customer.produk');
+});
 // Route::get('/', [ProductController::class, 'index']);
 
 Route::get('/dashboard', function () {

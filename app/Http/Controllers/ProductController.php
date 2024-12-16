@@ -9,6 +9,6 @@ class ProductController extends Controller
     public function index()
     {
         $products = \App\Models\Product::all();
-        return view('customer.products', compact('products'));
+        return view('customer.produk', compact('products'));
     }
 }
